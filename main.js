@@ -10,8 +10,8 @@
 4. Додайте можливість вводити нові завдання у текстове поле і додавати їх до списку за допомогою кнопки.*/
 
 const container = document.getElementById("container");
-const more_task = document.getElementById("more_task");
-let input_info = document.getElementById("input_info");
+const moreTask = document.getElementById("moreTask");
+let inputInfo = document.getElementById("inputInfo");
 
 
 
@@ -23,9 +23,9 @@ container.addEventListener("click", function (event) {
     }
 });
 
-more_task.addEventListener("click", function (event) {
-    if (event.target === clik_more_task) {
-        if (input_info.value.trim() === "") {
+moreTask.addEventListener("click", function (event) {
+    if (event.target === clikMoreTask) {
+        if (inputInfo.value.trim() === "") {
             alert("you dont have new task")
             return
         }
@@ -33,13 +33,13 @@ more_task.addEventListener("click", function (event) {
 
     if (event.target.tagName === "BUTTON") {
         const newLi = document.createElement('li');        
-        newLi.textContent = input_info.value;
+        newLi.textContent = inputInfo.value;
 
         const newButton = document.createElement('button');
         newButton.textContent = "clean";
         newLi.appendChild(newButton);
 
         container.appendChild(newLi);
-        input_info.value = '';
+        inputInfo.value = '';
     } 
 });
