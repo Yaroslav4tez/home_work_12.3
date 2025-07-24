@@ -11,7 +11,7 @@
 
 const container = document.getElementById("container");
 const moreTask = document.getElementById("moreTask");
-let inputInfo = document.getElementById("inputInfo");
+const inputInfo = document.getElementById("inputInfo");
 
 
 
